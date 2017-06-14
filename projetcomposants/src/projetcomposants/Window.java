@@ -51,7 +51,7 @@ import javax.swing.JTextPane;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextArea;
-
+	
 public class Window {
 
 	private JFrame frmGestionDeStock;
@@ -61,11 +61,14 @@ public class Window {
 	private JPanel panelDetailsProduit = null;
 	private JTable tableContenuPanier;
 	private JTextField textFieldNomRecherche;
-	private JTextField textFieldNewName;
+	private JTextField textFieldNewNom;
 	private JTable table_1;
 	private JTextField textFieldNewAdresse;
 	
 	private Application application;
+	private JTextField textFieldNewPrenom;
+	private JTextField textFieldNewCP;
+	private JTextField textFieldNewVille;
 
 
 	/**
@@ -319,10 +322,10 @@ public class Window {
 		lblNouveauClient.setBounds(487, 13, 131, 16);
 		panelNewClient.add(lblNouveauClient);
 		
-		textFieldNewName = new JTextField();
-		textFieldNewName.setBounds(82, 50, 304, 22);
-		panelNewClient.add(textFieldNewName);
-		textFieldNewName.setColumns(10);
+		textFieldNewNom = new JTextField();
+		textFieldNewNom.setBounds(82, 50, 184, 22);
+		panelNewClient.add(textFieldNewNom);
+		textFieldNewNom.setColumns(10);
 		
 		JButton btnPayerLaFacture = new JButton("Payer la facture");
 		btnPayerLaFacture.setBounds(653, 136, 153, 25);
@@ -333,9 +336,36 @@ public class Window {
 		panelNewClient.add(btnEnregistrerFacture);
 		
 		textFieldNewAdresse = new JTextField();
-		textFieldNewAdresse.setBounds(82, 79, 806, 22);
+		textFieldNewAdresse.setBounds(82, 79, 404, 22);
 		panelNewClient.add(textFieldNewAdresse);
 		textFieldNewAdresse.setColumns(10);
+		
+		JLabel lblPrenom = new JLabel("Prenom");
+		lblPrenom.setBounds(278, 53, 56, 16);
+		panelNewClient.add(lblPrenom);
+		
+		textFieldNewPrenom = new JTextField();
+		textFieldNewPrenom.setBounds(339, 50, 147, 22);
+		panelNewClient.add(textFieldNewPrenom);
+		textFieldNewPrenom.setColumns(10);
+		
+		JLabel lblCodePostal = new JLabel("Code postal");
+		lblCodePostal.setBounds(554, 53, 84, 16);
+		panelNewClient.add(lblCodePostal);
+		
+		JLabel lblVille = new JLabel("Ville");
+		lblVille.setBounds(562, 82, 56, 16);
+		panelNewClient.add(lblVille);
+		
+		textFieldNewCP = new JTextField();
+		textFieldNewCP.setBounds(650, 50, 213, 22);
+		panelNewClient.add(textFieldNewCP);
+		textFieldNewCP.setColumns(10);
+		
+		textFieldNewVille = new JTextField();
+		textFieldNewVille.setBounds(650, 79, 213, 22);
+		panelNewClient.add(textFieldNewVille);
+		textFieldNewVille.setColumns(10);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(0, 185, 911, 358);
